@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/pharmasene-github/static/css/main.7e6622cf.chunk.css",
+    "main.js": "/pharmasene-github/static/js/main.a0710ad9.chunk.js",
+    "main.js.map": "/pharmasene-github/static/js/main.a0710ad9.chunk.js.map",
+    "runtime-main.js": "/pharmasene-github/static/js/runtime-main.1941a097.js",
+    "runtime-main.js.map": "/pharmasene-github/static/js/runtime-main.1941a097.js.map",
+    "static/css/2.c490997a.chunk.css": "/pharmasene-github/static/css/2.c490997a.chunk.css",
+    "static/js/2.ad268a91.chunk.js": "/pharmasene-github/static/js/2.ad268a91.chunk.js",
+    "static/js/2.ad268a91.chunk.js.map": "/pharmasene-github/static/js/2.ad268a91.chunk.js.map",
+    "static/js/3.4559f090.chunk.js": "/pharmasene-github/static/js/3.4559f090.chunk.js",
+    "static/js/3.4559f090.chunk.js.map": "/pharmasene-github/static/js/3.4559f090.chunk.js.map",
+    "index.html": "/pharmasene-github/index.html",
+    "static/css/2.c490997a.chunk.css.map": "/pharmasene-github/static/css/2.c490997a.chunk.css.map",
+    "static/css/main.7e6622cf.chunk.css.map": "/pharmasene-github/static/css/main.7e6622cf.chunk.css.map",
+    "static/js/2.ad268a91.chunk.js.LICENSE.txt": "/pharmasene-github/static/js/2.ad268a91.chunk.js.LICENSE.txt",
+    "static/js/main.a0710ad9.chunk.js.LICENSE.txt": "/pharmasene-github/static/js/main.a0710ad9.chunk.js.LICENSE.txt",
+    "static/media/senepharmax-banner.5ab707f5.jpg": "/pharmasene-github/static/media/senepharmax-banner.5ab707f5.jpg",
+    "static/media/senepharmax-logo-small.9d706b56.png": "/pharmasene-github/static/media/senepharmax-logo-small.9d706b56.png",
+    "static/media/senepharmax-medicament-image.a43cab46.png": "/pharmasene-github/static/media/senepharmax-medicament-image.a43cab46.png",
+    "static/media/senepharmax-pharmacie-item-default.b3ff44f1.png": "/pharmasene-github/static/media/senepharmax-pharmacie-item-default.b3ff44f1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1941a097.js",
+    "static/css/2.c490997a.chunk.css",
+    "static/js/2.ad268a91.chunk.js",
+    "static/css/main.7e6622cf.chunk.css",
+    "static/js/main.a0710ad9.chunk.js"
+  ]
+}
