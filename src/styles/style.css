@@ -45,3 +45,9 @@
 #sn_carousel{
     box-shadow: 0px 5px 20px #145253;
 }
+
+#filter-section{
+    padding: 10px;
+    padding-left: 12% ;
+    padding-right: 12%;
+}

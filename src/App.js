@@ -34,16 +34,27 @@ function App() {
                 <Header />
                 <Container className="mt-5" id="content">
                     <Switch>
-
                         <Route exact path="/" component={Home} />
-
-                        <Route exact path="/pharmacies" component={PharmaciesView} />
-
-                        <Route exact path="/medicaments" component={MedicamentsView} />
-
-                        <Route exact path="/classes-therapeutiques" component={ClassesTherapeutiquesView} />
-
-                        <Route exact path="/conseils" component={ConseilsView} />
+                        <Route
+                            exact
+                            path="/pharmacies"
+                            component={PharmaciesView}
+                        />
+                        <Route
+                            exact
+                            path="/medicaments"
+                            component={MedicamentsView}
+                        />
+                        <Route
+                            exact
+                            path="/classes-therapeutiques"
+                            component={ClassesTherapeutiquesView}
+                        />
+                        <Route
+                            exact
+                            path="/conseils"
+                            component={ConseilsView}
+                        />
                         {/* <Route path="/login" component={Login} />
           <Route path="/register" component={Register} /> */}
                         <Route path="/login">

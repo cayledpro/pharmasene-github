@@ -157,10 +157,9 @@ const Home = () => {
                     </Row>
                 </Col>
             </Row>
-            <PharmaciesList />
-            <MedicamentsList />
         </div>
     );
 };
-
+/*<PharmaciesList />
+            <MedicamentsList />*/
 export default Home;
