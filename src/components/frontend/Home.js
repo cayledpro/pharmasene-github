@@ -6,43 +6,17 @@ import { GiHospitalCross } from "react-icons/gi";
 import { RiMentalHealthFill } from "react-icons/ri";
 import { FaPills } from "react-icons/fa";
 import { SiTeamspeak } from "react-icons/si";
+import { menu_infos } from "../../data/menu_infos";
 
 const CardService = ({ selectedCard }) => {
-    const infos = [
-        {
-            title: "Pharmacies",
-            description:
-                "Retrouvez la cartographie de toutes les officines du Sénégal et les pharmacies de garde.",
-            link: "/pharmacies",
-        },
-        {
-            title: "Médicaments",
-            description:
-                "Informez vous sur le prix des médicaments, les classes thérapeutiques et les descriptions.",
-            link: "/medicaments",
-        },
-        {
-            title: "Classes thérapeutiques",
-            description:
-                "Maecenas nec turpis mollis felis fringilla ultricies id sed urna. Nulla quis mi sapien.",
-            link: "/classes-therapeutiques",
-        },
-        {
-            title: "Conseils",
-            description:
-                "Faites-nous confiance et discutez avec nos experts pour des conseils sur mesure.",
-            link: "/conseils",
-        },
-    ];
-
     return (
         <Card className="p-5" id="sn_card_services">
             <Card.Body>
                 <Card.Title className="text-uppercase">
-                    {infos[selectedCard].title}
+                    {menu_infos[selectedCard].title}
                 </Card.Title>
-                <Card.Text>{infos[selectedCard].description}</Card.Text>
-                <Card.Link href={infos[selectedCard].link}>
+                <Card.Text>{menu_infos[selectedCard].description}</Card.Text>
+                <Card.Link href={menu_infos[selectedCard].link}>
                     Accéder à la page
                 </Card.Link>
             </Card.Body>

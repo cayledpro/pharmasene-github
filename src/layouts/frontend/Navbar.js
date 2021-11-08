@@ -52,10 +52,10 @@ function NavbarFront() {
                     <Nav className="me-auto">
                         <Nav.Link href="/pharmacies">Pharmacies</Nav.Link>
                         <Nav.Link href="/medicaments">Medicaments</Nav.Link>
-                        <Nav.Link href="#classes-therapeutiques">
+                        <Nav.Link href="/classes-therapeutiques">
                             Classes thérapeutiques
                         </Nav.Link>
-                        <Nav.Link href="#conseils">Conseils</Nav.Link>
+                        <Nav.Link href="/conseils">Conseils</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -12,31 +12,22 @@ function MedicamentsList() {
                 setMedicaments(res.data.medicament);
             }
             setLoading(false);
-            console.log(medicaments);
         });
     }, []);
 
+    if (loading) {
+        return <div className="text-danger">Loading...</div>;
+    } else {
+        console.log("Medicaments : ", medicaments);
+    }
+
     return (
         <Row className="justify-content-center">
-            {medicaments.map(
-                ({
-                    id,
-                    medicament_nom,
-                    medicament_categorie,
-                    medicament_reference,
-                    medicament_prix
-                }) => (
-                    <Col>
-                        <MedicamentsItem
-                            key={id}
-                            medicament_nom={medicament_nom}
-                            medicament_categorie={medicament_categorie}
-                            medicament_reference={medicament_reference}
-                            medicament_prix={medicament_prix}
-                        />
-                    </Col>
-                )
-            )}
+            {medicaments.map((medicament, index) => (
+                <Col>
+                    <MedicamentsItem key={index} medicament={medicament} />
+                </Col>
+            ))}
         </Row>
     );
 }

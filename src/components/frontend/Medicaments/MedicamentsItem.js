@@ -1,14 +1,7 @@
 import { Card } from "react-bootstrap";
 import defaultImage from "../../../assets/images/senepharmax-medicament-image.png";
 
-function MedicamentsItem({
-    id,
-    medicament_nom,
-    medicament_categorie,
-    medicament_reference,
-    medicament_prix,
-}) {
-    //, display: "inline-block"
+function MedicamentsItem({ medicament }) {
     return (
         <Card
             border="success"
@@ -18,12 +11,12 @@ function MedicamentsItem({
             <Card.Img variant="top" src={defaultImage} />
             <Card.Header className="text-success">Medicam test</Card.Header>
             <Card.Body>
-                <Card.Title>{medicament_nom}</Card.Title>
+                <Card.Title>{medicament.medicament_nom}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                    {medicament_categorie}
+                    {medicament.medicament_categorie}
                 </Card.Subtitle>
-                <Card.Subtitle>{medicament_reference}</Card.Subtitle>
-                <Card.Subtitle>{medicament_prix}</Card.Subtitle>
+                <Card.Subtitle>{medicament.medicament_reference}</Card.Subtitle>
+                <Card.Subtitle>{medicament.medicament_prix}</Card.Subtitle>
             </Card.Body>
             <Card.Footer className="text-muted">
                 <Card.Link href="#">Voir la liste</Card.Link>

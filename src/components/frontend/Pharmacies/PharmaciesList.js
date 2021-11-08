@@ -12,32 +12,21 @@ function PharmaciesList() {
                 setPharmacies(res.data.pharmacie);
             }
             setLoading(false);
-            console.log(pharmacies);
         });
     }, []);
 
     if (loading) {
         return <div className="text-danger">Loading...</div>;
+    } else {
+        console.log("Pharmacies : ", pharmacies);
     }
     return (
         <Row xs="auto" className="m-0 justify-content-center">
-            {pharmacies.map(
-                ({
-                    id,
-                    pharmacie_nom,
-                    pharmacie_adresse,
-                    pharmacie_numero,
-                }) => (
-                    <Col>
-                        <PharmaciesItem
-                            key={id}
-                            pharmacie_nom={pharmacie_nom}
-                            pharmacie_adresse={pharmacie_adresse}
-                            pharmacie_numero={pharmacie_numero}
-                        />
-                    </Col>
-                )
-            )}
+            {pharmacies.map((pharmacie, index) => (
+                <Col key={index}>
+                    <PharmaciesItem pharmacie={pharmacie} />
+                </Col>
+            ))}
         </Row>
     );
 }

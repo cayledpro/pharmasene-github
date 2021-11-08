@@ -15,6 +15,8 @@ import PharmaciesView from "./components/frontend/Pharmacies/PharmaciesView";
 import MedicamentsView from "./components/frontend/Medicaments/MedicamentsView";
 import { Container } from "react-bootstrap";
 import Header from "./layouts/frontend/Header";
+import ClassesTherapeutiquesView from "./components/frontend/ClassesTherapeutiques/ClassesTherapeutiquesView";
+import ConseilsView from "./components/frontend/Conseils/ConseilsView";
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = "https://senepharma-api.herokuapp.com/";
@@ -42,6 +44,16 @@ function App() {
                             exact
                             path="/medicaments"
                             component={MedicamentsView}
+                        />
+                        <Route
+                            exact
+                            path="/classes-therapeutiques"
+                            component={ClassesTherapeutiquesView}
+                        />
+                        <Route
+                            exact
+                            path="/conseils"
+                            component={ConseilsView}
                         />
                         {/* <Route path="/login" component={Login} />
           <Route path="/register" component={Register} /> */}

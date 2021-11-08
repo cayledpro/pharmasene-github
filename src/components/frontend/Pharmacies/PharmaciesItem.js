@@ -1,16 +1,9 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import defaultImage from "../../../assets/images/senepharmax-pharmacie-item-default.png";
 import { GoLocation } from "react-icons/go";
 import { FaSearchLocation, FaPhone } from "react-icons/fa";
-import { FcPhone } from "react-icons/fc";
 
-function PharmaciesItem({
-    id,
-    pharmacie_nom,
-    pharmacie_adresse,
-    pharmacie_numero,
-}) {
-    //, display: "inline-block"
+function PharmaciesItem({ pharmacie }) {
     return (
         <Card
             border="success"
@@ -18,18 +11,26 @@ function PharmaciesItem({
             style={{ width: "300px" }}
         >
             <Card.Img variant="top" src={defaultImage} />
-            <Card.Header className="text-success">
-                Cette pharmacie est de garde
-            </Card.Header>
+            {pharmacie.status ? (
+                <Card.Header className="text-success">
+                    Cette pharmacie est de garde
+                </Card.Header>
+            ) : (
+                <Card.Header className="text-danger">
+                    Cette pharmacie n'est pas de garde
+                </Card.Header>
+            )}
             <Card.Body>
                 <Card.Title className="text-uppercase">
-                    {pharmacie_nom}
+                    {pharmacie.pharmacie_nom}
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                    <GoLocation className="text-success" /> {pharmacie_adresse}
+                    <GoLocation className="text-success" />{" "}
+                    {pharmacie.pharmacie_adresse}
                 </Card.Subtitle>
                 <Card.Subtitle>
-                    <FaPhone className="text-success" /> {pharmacie_numero}
+                    <FaPhone className="text-success" />{" "}
+                    {pharmacie.pharmacie_numero}
                 </Card.Subtitle>
             </Card.Body>
             <Card.Footer className="text-muted">
