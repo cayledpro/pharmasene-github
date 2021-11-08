@@ -34,6 +34,7 @@ function App() {
                 <Header />
                 <Container className="mt-5" id="content">
                     <Switch>
+
                         <Route exact path="/" component={Home} />
 
                         <Route exact path="/pharmacies" component={PharmaciesView} />
