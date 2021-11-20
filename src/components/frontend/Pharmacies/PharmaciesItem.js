@@ -8,7 +8,7 @@ function PharmaciesItem({ pharmacie }) {
         <Card
             border="success"
             className="shadow m-2"
-            style={{ width: "300px" }}
+            style={{ width: "275px" }}
         >
             <Card.Img variant="top" src={defaultImage} />
             {pharmacie.status ? (
@@ -28,6 +28,7 @@ function PharmaciesItem({ pharmacie }) {
                     <GoLocation className="text-success" />{" "}
                     {pharmacie.pharmacie_adresse}
                 </Card.Subtitle>
+                <br/>
                 <Card.Subtitle>
                     <FaPhone className="text-success" />{" "}
                     {pharmacie.pharmacie_numero}

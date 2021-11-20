@@ -7696,6 +7696,7 @@ textarea.form-control-lg {
 
 .text-uppercase {
   text-transform: uppercase !important;
+  font-size: 10px;
 }
 
 .text-capitalize {
@@ -7730,6 +7731,7 @@ textarea.form-control-lg {
 .text-success {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+  font-size: 14px;
 }
 
 .text-info {
@@ -7745,6 +7747,7 @@ textarea.form-control-lg {
 .text-danger {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
+  font-size: 14px;
 }
 
 .text-light {

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
 import MedicamentsList from "./MedicamentsList";
 import { RiFilterFill, RiFilterOffFill } from "react-icons/ri";
+import { menu_infos } from "../../../data/menu_infos";
 
 function MedicamentsView() {
     const [loading, setLoading] = useState(true);
@@ -10,6 +11,7 @@ function MedicamentsView() {
     const [filteredData, setFilteredData] = useState(allData);
     const [displayFilters, setDisplayFilters] = useState(false);
     const [formValues, setFormValues] = useState(null);
+    const infos = menu_infos.filter((menu) => menu.link === "/medicaments")[0];
 
     useEffect(() => {
         axios
@@ -25,13 +27,6 @@ function MedicamentsView() {
                 console.log("ERROR getting medicaments: " + err);
             });
     }, []);
-    /*
-    if (loading) {
-        return <div className="text-danger">Loading...</div>;
-    } else {
-        console.log("Pharmacies : ", pharmacies);
-    }
-*/
 
     const handleSearch = (event) => {
         event.preventDefault();
@@ -73,26 +68,31 @@ function MedicamentsView() {
 
     return (
         <div>
-            <div id="filter-section">
-                {displayFilters ? (
-                    <Button
-                        className="mb-3"
-                        variant="secondary"
-                        onClick={() => setDisplayFilters(!displayFilters)}
-                    >
-                        <RiFilterOffFill />
-                        Fermer
-                    </Button>
-                ) : (
-                    <Button
-                        className="mb-3"
-                        variant="outline-secondary"
-                        onClick={() => setDisplayFilters(!displayFilters)}
-                    >
-                        <RiFilterFill />
-                        Afficher les filtres
-                    </Button>
-                )}
+            <h1 className="text-center text-dark pt-3">{infos.title}</h1>
+            <p className="text-center text-dark">{infos.description}</p>
+            <div id="filter-section" className="pb-3">
+                <Row xs="auto" className="m-0 justify-content-center">
+                    {displayFilters ? (
+                        <Button
+                            className="mb-3"
+                            variant="secondary"
+                            onClick={() => setDisplayFilters(!displayFilters)}
+                        >
+                            <RiFilterOffFill />
+                            Fermer
+                        </Button>
+                    ) : (
+                        <Button
+                            size="lg"
+                            className="mb-3"
+                            variant="outline-secondary"
+                            onClick={() => setDisplayFilters(!displayFilters)}
+                        >
+                            <RiFilterFill />
+                            Afficher les filtres
+                        </Button>
+                    )}
+                </Row>
                 {displayFilters ? (
                     <Form onSubmit={(event) => handleSearch(event)}>
                         <FloatingLabel

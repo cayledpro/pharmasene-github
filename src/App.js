@@ -32,7 +32,7 @@ function App() {
         <div className="App">
             <Router>
                 <Header />
-                <Container className="mt-5" id="content">
+                <Container className="mt-5 p-0" id="content">
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route
